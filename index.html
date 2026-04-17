@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card — Chukwudumebi Orji</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <article data-testid="test-profile-card" class="profile-card">
+      <figure class="profile-avatar-figure">
+        <img
+          data-testid="test-user-avatar"
+          src="https://avatars.githubusercontent.com/u/0?v=4"
+          alt="Profile photo of Chukwudumebi Orji"
+          class="profile-avatar"
+        />
+        <figcaption class="sr-only">Chukwudumebi Orji's avatar</figcaption>
+      </figure>
+
+      <div class="profile-info">
+        <header>
+          <h2 data-testid="test-user-name" class="profile-name">
+            Chukwudumebi Orji
+          </h2>
+        </header>
+
+        <p data-testid="test-user-bio" class="profile-bio">
+          Frontend developer passionate about building accessible, responsive,
+          and beautiful web experiences. Currently learning and growing with HNG.
+        </p>
+
+        <section class="profile-section" aria-label="Current time">
+          <h3 class="section-title">Current Time</h3>
+          <time
+            data-testid="test-user-time"
+            id="current-time"
+            class="profile-time"
+            aria-live="polite"
+          ></time>
+        </section>
+
+        <nav aria-label="Social links">
+          <h3 class="section-title">Social Links</h3>
+          <ul data-testid="test-user-social-links" class="profile-social-links">
+            <li>
+              <a
+                data-testid="test-user-social-github"
+                href="https://github.com/ChukwudumebiOrji"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                data-testid="test-user-social-twitter"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i> Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                data-testid="test-user-social-linkedin"
+                href="https://linkedin.com/in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <section aria-label="Hobbies">
+          <h3 class="section-title">Hobbies</h3>
+          <ul data-testid="test-user-hobbies" class="profile-list">
+            <li>Coding</li>
+            <li>Reading</li>
+            <li>Gaming</li>
+            <li>Music</li>
+          </ul>
+        </section>
+
+        <section aria-label="Dislikes">
+          <h3 class="section-title">Dislikes</h3>
+          <ul data-testid="test-user-dislikes" class="profile-list dislikes">
+            <li>Bugs in production</li>
+            <li>Slow internet</li>
+            <li>Unnecessary meetings</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>
