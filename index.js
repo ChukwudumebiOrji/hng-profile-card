@@ -1,15 +1,16 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const timeElement = document.getElementById("current-time");
+function renderTime() {
+    var timeElement = document.getElementById("current-time");
 
-  const updateTime = () => {
-    const currentTimeMs = Date.now();
     if (timeElement) {
-      timeElement.textContent = currentTimeMs;
+        var ms = Date.now();
+        timeElement.textContent = ms;
+        timeElement.setAttribute("datetime", new Date(ms).toISOString());
     }
-  };
-  updateTime();
+}
 
-  setInterval(updateTime, 500);
+window.addEventListener("DOMContentLoaded", function() {
+    renderTime();
+    setInterval(renderTime, 500);
 });
