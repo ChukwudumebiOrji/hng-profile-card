@@ -1,14 +1,15 @@
 "use strict";
 
-const timeElement = document.getElementById("current-time");
+document.addEventListener("DOMContentLoaded", () => {
+  const timeElement = document.getElementById("current-time");
 
+  const updateTime = () => {
+    const currentTimeMs = Date.now();
+    if (timeElement) {
+      timeElement.textContent = currentTimeMs;
+    }
+  };
+  updateTime();
 
-
-const updateTime = () => {
-  const now = new Date()
-  const currentTime = now.toLocaleTimeString();
-  timeElement.textContent = currentTime
-}
-
-updateTime();
-setInterval(updateTime, 1000);
+  setInterval(updateTime, 500);
+});
