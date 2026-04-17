@@ -2,11 +2,12 @@
 
 const timeElement = document.getElementById("current-time");
 
-console.log(timeElement)
-console.log(Date.now())
+
 
 const updateTime = () => {
-  timeElement.textContent = ${Date.now()};
+  const now = new Date()
+  const currentTime = now.toLocaleTimeString();
+  timeElement.textContent = currentTime
 }
 
 updateTime();
