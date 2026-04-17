@@ -3,7 +3,7 @@
 const timeElement = document.getElementById("current-time");
 
 function updateTime() {
-  timeElement.textContent = Date.now();
+  timeElement.innerHTML = '<span>Date.now()<span>';
 }
 
 updateTime();
